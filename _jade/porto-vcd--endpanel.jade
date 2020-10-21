@@ -1,0 +1,16 @@
+.wrapper-12
+  .l-blNav
+    | {% if page.previous %}
+    a.l-blog(href="{{ page.previous.url }}")
+      .icon-caret
+        img(src="/assets/img/ico-caret.svg")
+      span.fn-small {{ page.previous.title }}
+      | {% endif %}
+      
+    | {% if page.next %}
+    a.l-blog--(href="{{ page.next.url }}")
+      span.fn-small {{ page.next.title }}
+      .icon-caret
+        img(src="/assets/img/ico-caret.svg")
+      
+      | {% endif %}

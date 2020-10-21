@@ -1,0 +1,40 @@
+// porto
+.l-porto
+  &--icons
+    display: flex
+    position: relative
+    width: 100%
+    height: 110px
+
+  &--icons-wrapper
+    +span-columns(6 of 12)
+    overflow: hidden
+    background-color: rgba(3, 63, 112, 0)
+    transition: .3s ease-in-out
+    img
+      width: 40px
+      height: 100px
+      position: relative
+      display: block
+      margin: 0 auto
+      transform: translateY(0)
+      transition: .3s all ease-in-out
+    h3
+      display: block
+      text-align: center
+      position: relative
+      margin-top: 20px
+      transform: translateY(0)
+      transition: .3s all ease-in-out
+      opacity: 0
+    &:hover
+      background-color: $biru
+      transition: .3s all ease-in-out
+      img
+        transform: translateY(-100px)
+        transition: .3s all cubic-bezier(.12,1.47,.92,1.18)
+      h3
+        transform: translateY(-80px)
+        transition: .5s all cubic-bezier(.12,1.47,.92,1.18)
+        color: $abu
+        opacity: 1

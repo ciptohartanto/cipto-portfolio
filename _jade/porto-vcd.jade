@@ -1,0 +1,24 @@
+.wrapper-8 
+  .l-section-margins
+    .l-toptitle
+      h2.fn-big2 Portfolio
+    .l-porto--icons
+      //- a.l-porto--icons-wrapper(href="/porto-ui")
+      //-   img(src="assets/img/ico-ui.svg" alt="icon for Cipto Hartanto's work on User Interface")
+      //-   h3.fn-med Visual Design
+      a.l-porto--icons-wrapper.icons-wrapper--is-active(href="#")
+        img(src="assets/img/ico-gd.svg" alt="icon for Cipto Hartanto's work on Graphic/Visual Communication Design")
+        h3.fn-med Visual Design
+      a.l-porto--icons-wrapper(href="/porto-photo.html")
+        img(src="assets/img/ico-cam.svg" alt="icon for Cipto Hartanto's work on Photography")
+        h3.fn-med Still Images
+.wrapper-8#here
+  .l-porto-vcd
+    
+    ul.l-vcd
+      | {% for portfolio in site.portfolio %}
+      li.l-vcd--list
+        a.fn-med.btn-inter(href="{{portfolio.url}}") {{portfolio.title}}
+          .l-vcd--preview
+            img(src="/assets/img/porto/visual/{{portfolio.imgreference}}" alt="{{portfolio.alt}}")
+        | {% endfor %}

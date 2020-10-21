@@ -1,0 +1,265 @@
+.l-btn--plus
+  display: flex
+  align-items: center
+  padding-top: 2em
+  .btn-next
+    display: flex
+    padding: 0 0 0 1em
+    position: relative
+    float: left
+    width: 50px
+    height: 30px
+    border: 1px solid $biru
+    border-radius: 20px
+    margin-right: 10px
+    cursor: pointer
+    transition: .3s all ease-in-out
+    .btn-next--
+      position: absolute
+      display: block
+      overflow: visible
+      height: 2px
+      width: 20px
+      background-color: $biru
+      margin-top: 16px
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      transition: .1s all ease-in-out
+      &::before, &:after
+        position: absolute
+        display: block
+        content: ''
+        height: 10px
+        width: 2px
+        background-color: $biru
+        margin-top: -8px
+        margin-left: 9px
+        transition: .1s all ease-in-out
+      &::after
+        margin-top: 0px
+        transition: .1s all ease-in-out
+  &:hover
+    .btn-next
+      border-radius: 2px
+      transition: .3s all ease-in-out
+      .btn-next--
+        &::after
+          position: absolute
+          display: block
+          content: ''
+          transform: rotate(50deg) translateX(3px) translateY(-4px)
+          transition: .1s all ease-in-out
+  &:hover
+
+    .btn-next--
+      transform: scale(1.2)
+      transition: .3s all ease-in-out
+      &::before
+        position: absolute
+        display: block
+        content: ''
+        transform: rotate(-50deg) translateX(3px) translateY(4px)
+        transition: .1s all ease-in-out
+
+
+
+
+.btn-menu
+  width: 48px
+  height: 48px
+  border-radius: 100%
+  border: 2px solid $biru
+  display: block
+  position: absolute
+  z-index: 2
+  top: 40px
+  right: 33px
+  cursor: pointer
+  overflow: hidden
+  &::after
+    width: 20px
+    height: 20px
+    border-radius: 100%
+    content: ''
+    background-color: $biru
+    border-radius: 100%
+    position: absolute
+    z-index: 1
+    transform: translateX(12px) translateY(12px)
+    opacity: 0
+    transition: .3s all ease-in-out
+  .btn-menu--
+    position: absolute
+    z-index: 2
+    display: block
+    height: 1px
+    width: 20px
+    transform: translateX(-33px)
+    background-color: $mas
+    margin-top: 16px
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    transition: .3s all ease-in-out
+  .btn-menu---
+    position: absolute
+    z-index: 2
+    display: block
+    content: ''
+    height: 3px
+    width: 20px
+    background-color: $biru
+    top: 17px
+    left: 12px
+    transition: .3s all ease-in-out
+    overflow: visible
+    &::after
+      position: absolute
+      display: block
+      z-index: 2
+      content: ''
+      height: 3px
+      width: 20px
+      background-color: $biru
+      left: 0px
+      top: 8px
+      transition: .3s all ease-in-out
+
+  &:hover
+    .btn-menu--
+      transform: translateX(0px) scaleY(1.8)
+      transition: .3s all ease-in-out
+      background-color: $mas
+      display: block
+  &:hover
+    .btn-menu---
+      transition: .3s all ease-in-out
+      top: 14px
+      background-color: $mas
+      &::after
+        transition: .3s all ease-in-out
+        top: 15px
+        background-color: $mas
+  &:hover::after
+    transition: .3s all cubic-bezier(.12,1.47,.92,1.18)
+    border-radius: 100%
+    transform: scale(2) translateX(6px) translateY(6px)
+    opacity: 1
+
+
+
+.btn-inter
+  @extend .cl-gold
+  display: inline-block
+  position: relative
+  padding: 0 5px
+  transition: .2s all ease-in-out
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-image: $gradasi
+  background-position: 0 0px
+  color: $biru
+  &::before
+    content: ''
+    position: absolute
+    // overflow: hidden
+    height: 90%
+    width: 0%
+    bottom: 0
+    left: 0
+    z-index: -1
+    transition: .3s all cubic-bezier(.12,1.47,.92,1.18)
+    background: $abu
+
+  &::after
+    content: ''
+    bottom: 0
+    right: 0
+    position: absolute
+    width: 0%
+    height: 3px
+    background: $mas
+    transition: .2s all ease-in-out
+    z-index: 0
+  &:hover
+    color: $mas
+    transition: .2s all ease-in-out
+    background-position: 100px -200px
+  &:hover::before
+    width: 100%
+    transition: .3s all cubic-bezier(.12,1.47,.92,1.18)
+  &:hover::after
+    width: 100%
+    transition: .3s all ease-in-out
+
+
+
+//button slideshow
+.arL, .arR
+  background-size: cover
+  background-repeat: no-repeat
+  width: 30px
+  height: 30px
+  display: block
+  position: absolute
+  top: 50vh
+  cursor: pointer
+  transform: scale(1)
+  transition: .2s all ease-in-out
+  &:hover
+    transform: scale(1.1)
+    transition: .2s all ease-in-out
+.arL
+  background-image: url(../img/ico-arL.svg)
+  +media($mobile)
+    left: 1%
+  +media($tablet)
+    left: 5%
+  +media($pc)
+    left: 8%
+  +media($xl)
+    left: 15%
+.arR
+  background-image: url(../img/ico-arR.svg)
+  +media($mobile)
+    right: 1%
+  +media($tablet)
+    right: 5%
+  +media($pc)
+    right: 8%
+  +media($xl)
+    right: 15%
+.close
+  width: 30px
+  height: 30px
+  position: absolute
+  display: block
+  top: 25px
+  cursor: pointer
+  +media($mobile)
+    right: 1%
+  +media($tablet)
+    right: 5%
+  +media($pc)
+    right: 8%
+  +media($xl)
+    right: 15%
+  &::before, &::after
+    content: ''
+    display: block
+    position: absolute
+    width: 2px
+    height: 30px
+    background-color: $mas
+    transform: rotate(45deg) scale(1)
+  &::after
+    transform: rotate(-45deg) scale(1)
+  &:hover::before
+    transform: rotate(45deg) scale(1.1)
+  &:hover::after
+    transform: rotate(-45deg) scale(1.1)

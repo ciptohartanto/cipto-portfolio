@@ -1,0 +1,42 @@
+// bio
+.bio
+  position: fixed
+  //it doesn't work if 'span' is moved under .prgph
+
+.magic
+  position: relative
+  display: table
+  top: 0
+  max-height: 1600px
+  +media($mobile)
+    height: 1500px
+    max-height: 1500px
+  +media($tablet)
+    height: 1800px
+
+
+.prgph
+  opacity: 0
+  position: fixed
+  top: 0
+  transition: .5s all ease-in-out
+  +media($mobile)
+    padding-top: 70px
+
+.prgph
+  span
+    opacity: 0
+
+.p
+  position: relative
+  &::before
+    content: attr(data-year)
+    position: absolute
+    top: -25px
+    color: $biru
+    -webkit-background-clip: text
+    -webkit-text-fill-color: $biru
+    font-size: 15px
+    // background-image: $gradasi
+    border-bottom: 1px solid $biru
+    line-height: 17px

@@ -1,0 +1,210 @@
+.fade-me
+  height: 100vh
+  width: 100vw
+  top: 0
+  position: fixed
+  z-index: 20
+  background-color: rgba(225, 225, 225, 1)
+  transition: 1s all ease-in-out
+  opacity: 1
+.fadeout
+  background-color: rgba(225, 225, 225, 0)
+  transition: 1s all ease-in-out
+  opacity: 0
+  z-index: -20
+
+.wrapper--active
+  padding: 20px
+
+.nav--is-active
+  height: 100vh
+  width: 100%
+  border-radius: 0
+  right: 0
+  top: 0
+  position: fixed
+  background-image: linear-gradient(45deg, $biru 0%, $ijo 100%)
+  z-index: 5
+  opacity: 1
+  transition: .3s all cubic-bezier(.12,1.47,.92,1.18)
+
+.btn-menu--is-active
+  border-color: $abu
+  &::after
+    background-color: $abu
+    opacity: 1
+    transform: scale(2) translateX(6px) translateY(6px)
+  &:hover
+    .btn-menu--
+      display: none
+  &:hover
+    .btn-menu---
+      transition: .3s all ease-in-out
+      top: 21px
+      left: 13px
+      transform: rotate(-45deg)
+      background-color: $mas
+      &::after
+        transition: .3s all ease-in-out
+        top: 0
+        transform: rotate(90deg)
+        background-color: $mas
+
+.body-stopscroll
+  overflow: hidden
+
+.icons-wrapper--is-active
+  background-color: $biru
+  img
+    transform: translateY(-100px)
+    opacity: 1
+  h3
+    transform: translateY(-80px)
+    opacity: 1
+    color: $abu
+
+.photo--is-active
+  position: fixed
+  // height: 90vh
+  max-width: 900px
+  z-index: 31
+  transform: none
+  transition: none
+  display: block
+  left: 0
+  right: 0
+  top: 20px
+  bottom: 0
+  margin: auto
+  +media($mobile)
+    // min-width: 280px
+    width: 75%
+  +media($tablet)
+    width: 75%
+  +media($pc)
+    width: 75%
+
+.l-photo--w.photo--is-active
+  max-height: none
+  margin: auto
+  height: 90%
+  img, .t-min-100, .t-min-10
+    transform: none
+    transition: none
+    display: block
+    margin: 0 auto
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    height: auto
+    width: 100%
+    margin: auto
+  .t-min-100, .t-min-10
+
+    width: auto
+    +media($mobile)
+      height: 73%
+    +media($tablet)
+      height: 73%
+    +media($pc)
+      height: 83%
+
+  // img
+  //   height: auto
+  //   width: 100%
+  //   margin: auto
+  //   left: 0
+  //   right: 0
+  //   bottom: 0
+  //   top: 0
+  //   position: absolute
+
+
+  &:hover
+    transform: none
+    transition: none
+    img, .t-min-100, .t-min-10
+      transform: none
+      transition: none
+
+.portrait.photo--is-active
+  max-height: none
+  margin: auto
+  height: 90%
+
+
+
+.head-banner--is-active
+  transition: .3s all ease-in-out
+  +media($mobile)
+    width: 100%
+    height: 100px
+    position: fixed
+    top: 0
+    left: 0
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 4%,rgba(255,255,255,1) 59%,rgba(255,255,255,0.67) 78%,rgba(255,255,255,0.48) 84%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%)
+    z-index: 25
+    .l--logo
+      img
+        transition: .3s all ease-in-out
+        position: absolute
+        top: 16px
+        left: 20px
+        margin: 0
+        width: 100px
+    .btn-menu
+      right: 20px
+      top: 6px
+  +media($tablet)
+    background: none
+    height: 0
+    width: auto
+    position: inherit
+    // .l--logo
+    //   margin: 47px 0 0 33px
+    .l--logo
+      img
+        transition: .3s all ease-in-out
+        position: fixed
+        width: 118px
+        margin: 47px 0 0 33px
+        width: 100px
+    .btn-menu
+      transition: .3s all ease-in-out
+      top: 40px
+      right: 33px
+      position: fixed
+
+  +media($pc)
+    .l--logo
+      img
+        width: 118px
+
+  .btn-menu.btn-menu--is-active
+    border-color: $abu
+    top: 40px
+    right: 33px
+
+
+.bg-head--is-none
+  background: none
+
+.prgph--is-active
+  opacity: 1
+  transition: .2s all ease-in-out
+
+.prgph
+  .span--is-active
+    opacity: 1
+    transition: 1s all ease-in-out
+
+.scrolll
+  overflow: scroll
+  &::before
+    content: ''
+    position: absolute
+    height: 0
+    width: 0
+    transition: .1s all ease-in-out

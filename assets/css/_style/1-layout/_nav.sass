@@ -1,0 +1,105 @@
+.l-head-banner
+  transition: .3s all ease-in-out
+  +media($mobile)
+    height: 0
+
+.l--logo
+  img
+    height: auto
+    cursor: pointer
+    position: absolute
+    z-index: 1
+    margin: 50px 0 0 33px
+    transition: .3s all ease-in-out
+    +media($mobile)
+      width: 100px
+      transition: .3s all ease-in-out
+    +media($tablet)
+      width: 100px
+      transition: .3s all ease-in-out
+    +media($pc)
+      position: fixed
+      width: 118px
+      margin: 47px 0 0 33px
+      transition: .3s all ease-in-out
+.btn-menu
+  z-index: 10
+  transition: .3s all ease-in-out
+  +media($mobile)
+    position: absolute
+    transition: .3s all ease-in-out
+  +media($pc)
+    transition: .3s all ease-in-out
+    position: fixed
+
+.l--nav
+  +span-columns(12)
+  height: 100px
+  width: 100px
+  border-radius: 100%
+  right: -24px
+  top: -32px
+  position: fixed
+  background: white
+  padding: 0
+  margin: 0
+  z-index: -5
+  opacity: 0
+  transition: .7s all cubic-bezier(.12,1.47,.92,1.18)
+
+nav
+  ul
+    text-align: center
+    li
+      overflow: hidden
+      display: block
+      +media($mobile)
+        height: 51px
+        padding-top: 22px
+      +media($tablet)
+        padding-top: 53px
+        height: 80px
+      +media($pc)
+        padding-top: 53px
+        height: 80px
+
+      &::after
+        content: ''
+        height: 0px
+
+        left: 0
+        right: 0
+        margin: auto
+        color: $biru
+        width: 48%
+        display: block
+        box-shadow: 0px 8px 36px 26px rgba(0,16,74,1)
+        transition: .1s all ease-in-out
+        position: relative
+        +media($mobile)
+          top: 17px
+        +media($tablet)
+          top: 0
+        +media($pc)
+          top: 0
+      a
+        color: $abu
+        cursor: pointer
+        position: relative
+        display: inline-block
+        transition: .1s all ease-in-out
+        line-height: 32px
+        +media($mobile)
+          font-size: 50px
+        +media($tablet)
+          font-size: 100px
+        +media($pc)
+          font-size: 100px
+        &:hover
+          transition: .2s all ease-in-out
+          +media($mobile)
+            transform: translateY(0px)
+          +media($tablet)
+            transform: translateY(-19px)
+          +media($pc)
+            transform: translateY(-15px)

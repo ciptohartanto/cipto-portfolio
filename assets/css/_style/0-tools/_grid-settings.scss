@@ -1,0 +1,27 @@
+@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 100%;
+
+// Define your breakpoints
+
+$xl: new-breakpoint(min-width 1440px 12);
+$pc: new-breakpoint(min-width 992px 12);
+$tablet: new-breakpoint(min-width 768px 12);
+$mobile3: new-breakpoint(min-width 512px 12);
+$mobile2: new-breakpoint(min-width 420px 12);
+$mobile: new-breakpoint(min-width 320px 12);
+
+
+$visual-grid: false;
+$visual-grid-color: #2babe1;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
