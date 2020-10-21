@@ -13,7 +13,7 @@ description: Cipto Hartanto is a visual designer with interests in front-end arc
 # baseurl: "" # the subpath of your site, e.g. /blog
 # keywords: Cipto Hartanto UI/UX designer Indonesia Taiwan 陳積多 sharing music photography
 # url: "http://localhost:3000/" # the base hostname & protocol for your site
-url: "https://ciptohartanto.com/"
+url: "portfolio"
 
 collections:
     portfolio:
